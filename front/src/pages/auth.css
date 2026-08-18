@@ -1,0 +1,171 @@
+/* pages/auth.css —— 登录 / 注册 / 首页（微软 Fluent 风格） */
+
+/* ── 品牌标 ── */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0078d4, #0067b8);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 103, 184, 0.35);
+}
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ms-text);
+}
+
+/* ── 卡片 ── */
+.auth-page,
+.home-page {
+  width: 100%;
+  max-width: 400px;
+  background: var(--ms-card);
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 36px 32px 28px;
+  text-align: center;
+}
+.auth-page h2,
+.home-page h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ms-text);
+}
+.subtitle {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--ms-text-weak);
+}
+
+/* ── 输入框 ── */
+.auth-page input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid var(--ms-border);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ms-text);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.auth-page input::placeholder {
+  color: #a0a0a0;
+}
+.auth-page input:focus {
+  outline: none;
+  border-color: var(--ms-blue);
+  box-shadow: 0 0 0 2px var(--ms-blue-light);
+}
+
+/* ── 主按钮 ── */
+.auth-page button,
+.home-page button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 4px;
+  background: var(--ms-blue);
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.auth-page button:hover,
+.home-page button:hover {
+  background: var(--ms-blue-dark);
+}
+.auth-page button:active,
+.home-page button:active {
+  background: #004e8c;
+}
+
+/* 首页「去登录」做成主按钮样式的链接 */
+.home-page a.primary-link {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 16px;
+  border-radius: 4px;
+  background: var(--ms-blue);
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.home-page a.primary-link:hover {
+  background: var(--ms-blue-dark);
+  text-decoration: none;
+}
+
+/* ── 错误提示 ── */
+.error {
+  margin: 0 0 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #fde7e9;
+  border: 1px solid #f5c6cb;
+  color: var(--ms-error);
+  font-size: 13px;
+  text-align: left;
+}
+
+/* ── 页脚切换链接 ── */
+.switch {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--ms-text-weak);
+}
+
+/* ── 首页专属 ── */
+.avatar {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0078d4, #5ea9dd);
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 103, 184, 0.3);
+}
+.status {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.status-ok {
+  color: #107c10; /* 微软绿：成功 */
+}
+.token {
+  margin: 12px 0 0;
+  padding: 8px;
+  font-size: 11px;
+  font-family: 'Cascadia Code', Consolas, monospace;
+  color: var(--ms-text-weak);
+  word-break: break-all;
+  background: #f5f5f5;
+  border-radius: 4px;
+  text-align: left;
+}
